@@ -1,0 +1,150 @@
+/* Custom styles for the music player */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+#progress::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #3b82f6 var(--progress), #e5e7eb var(--progress));
+}
+
+#volume::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #3b82f6 var(--volume), #e5e7eb var(--volume));
+}
+
+button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Spinner styles for loading */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Theme Styles using data-theme */
+[data-theme="light"] {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+[data-theme="light"] .bg-gray-100 {
+  background-color: #f3f4f6;
+}
+
+[data-theme="light"] .bg-white {
+  background-color: #ffffff;
+}
+
+[data-theme="light"] .text-gray-600 {
+  color: #4b5563;
+}
+
+[data-theme="light"] .text-gray-500 {
+  color: #6b7280;
+}
+
+[data-theme="light"] .bg-gray-200 {
+  background-color: #e5e7eb;
+}
+
+[data-theme="light"] .border-gray-300 {
+  border-color: #d1d5db;
+}
+
+[data-theme="light"] .hover\:bg-gray-300:hover {
+  background-color: #d1d5db;
+}
+
+[data-theme="dark"] {
+  background-color: #1f2937;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+  background-color: #374151;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #374151;
+}
+
+[data-theme="dark"] .text-gray-600 {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .text-gray-500 {
+  color: #6b7280;
+}
+
+[data-theme="dark"] .bg-gray-200 {
+  background-color: #4b5563;
+}
+
+[data-theme="dark"] .border-gray-300 {
+  border-color: #6b7280;
+}
+
+[data-theme="dark"] .hover\:bg-gray-300:hover {
+  background-color: #6b7280;
+}
+
+[data-theme="dark"] #drop-zone {
+  border-color: #6b7280;
+}
+
+[data-theme="dark"] #drop-zone p {
+  color: #9ca3af;
+}
+
+/* Playlist Styles */
+#playlist-songs {
+  transition: background-color 0.3s ease;
+}
+
+.remove-song-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.remove-song-btn:hover {
+  background-color: #d32f2f;
+}
+
+#clear-playlist-songs-btn,
+#delete-playlist-btn {
+  transition: background-color 0.3s ease;
+}
